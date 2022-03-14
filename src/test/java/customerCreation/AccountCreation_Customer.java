@@ -26,7 +26,7 @@ public class AccountCreation_Customer {
     public void enterValidDetailsAndSignUp() throws InterruptedException, IOException {
         SignUp signup = SignUp.SignUpObj(driver);
         signup.clickCreateBtn();
-        signup.enterDetails("newavon56@rep.com");
+        signup.enterDetails("newavon57@rep.com");
         signup.clickSignUp();
         BasicUtils.enterOtp(driver);
         BasicUtils.takeSnip(driver);
