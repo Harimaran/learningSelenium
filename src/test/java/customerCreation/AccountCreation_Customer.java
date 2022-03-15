@@ -16,7 +16,7 @@ import java.sql.SQLException;
 public class AccountCreation_Customer {
     WebDriver driver =null;
 
-    @Test (priority = 0)
+    @BeforeTest
     public void gotoSite(){
         driver = InstanceClass.initializeDriver();
         InstanceClass.enterToSite("https://qa-ecom-aws.avon.com/");
@@ -26,7 +26,7 @@ public class AccountCreation_Customer {
     public void enterValidDetailsAndSignUp() throws InterruptedException, IOException {
         SignUp signup = SignUp.SignUpObj(driver);
         signup.clickCreateBtn();
-        signup.enterDetails("newavon59@rep.com");
+        signup.enterDetails("newavon62@rep.com");
         signup.clickSignUp();
         BasicUtils.enterOtp(driver);
         BasicUtils.takeSnip(driver);
@@ -46,13 +46,13 @@ public class AccountCreation_Customer {
     public void CheckAcctTypeInDB() throws SQLException, ClassNotFoundException, InstantiationException, IllegalAccessException {
         Database con2DB = Database.databaseAccess();
         con2DB.connectToDB();
-        con2DB.executeQuery("newavon51@rep.com");
+        con2DB.executeQuery("newavon62@rep.com");
         String result = con2DB.getResultFromQuery("AcctType");
         System.out.println(result);
         Assert.assertEquals(result, "UE");
     }
 
-    @Test(enabled = false)
+    @AfterTest
     public void closeBrowser() throws InterruptedException, IOException {
         driver.quit();
     }
