@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="NewAvon-Regression">
+    <test name="Check SignUp with valid details">
+        <parameter name="email" value="newavon86@rep.com"></parameter>
+       <classes>
+           <class name="customerCreation.AccountCreation_Customer"></class>
+       </classes>
+    </test>
+    <test name="Check SigUp with Invalid details">
+        <parameter name="email" value="newavon87@rep.com"></parameter>
+        <classes>
+            <class name="customerCreation.AccountCreation_Customer"></class>
+        </classes>
+    </test>
+</suite>
