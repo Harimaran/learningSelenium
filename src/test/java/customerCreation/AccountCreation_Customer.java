@@ -4,10 +4,7 @@ import database.Database;
 import driverFactory.InstanceClass;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pages.CustomerCreation.SignUp;
 import utility.BasicUtils;
 import java.io.IOException;
@@ -15,6 +12,7 @@ import java.sql.SQLException;
 
 public class AccountCreation_Customer {
     WebDriver driver =null;
+    String Email = null;
 
     @BeforeTest
     public void gotoSite(){
@@ -23,10 +21,11 @@ public class AccountCreation_Customer {
     }
 
     @Test (priority = 1)
-    public void enterValidDetailsAndSignUp() throws InterruptedException, IOException {
+    @Parameters ("email")
+    public void enterValidDetailsAndSignUp(String email) throws InterruptedException, IOException {
         SignUp signup = SignUp.SignUpObj(driver);
         signup.clickCreateBtn();
-        signup.enterDetails("newavon62@rep.com");
+        signup.enterDetails(email);
         signup.clickSignUp();
         BasicUtils.enterOtp(driver);
         BasicUtils.takeSnip(driver);
@@ -43,12 +42,12 @@ public class AccountCreation_Customer {
     }
 
     @Test (priority = 2)
-    public void CheckAcctTypeInDB() throws SQLException, ClassNotFoundException, InstantiationException, IllegalAccessException {
+    @Parameters ("email")
+    public void CheckAcctTypeInDB(String email) throws SQLException, ClassNotFoundException, InstantiationException, IllegalAccessException {
         Database con2DB = Database.databaseAccess();
         con2DB.connectToDB();
-        con2DB.executeQuery("newavon62@rep.com");
+        con2DB.executeQuery(email);
         String result = con2DB.getResultFromQuery("AcctType");
-        System.out.println(result);
         Assert.assertEquals(result, "UE");
     }
 
