@@ -1,5 +1,5 @@
 package becomeARep;
 
 public class barClass {
-    //Newly Added
+    //Newly Added comment 2
 }
