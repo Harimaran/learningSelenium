@@ -27,6 +27,7 @@ public class Database extends DBDetails{
 
     private static void connect2DB() throws SQLServerException {
         //DataSource method
+
         SQLServerDataSource dbs = new SQLServerDataSource();
         dbs.setServerName(serverName);
         dbs.setPortNumber(Integer.parseInt(port));

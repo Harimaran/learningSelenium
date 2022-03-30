@@ -7,7 +7,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e0c6aa5-8545-4d9d-b074-5d44bb8d7dae" name="Default Changelist" comment="parameterized" />
+    <list default="true" id="1e0c6aa5-8545-4d9d-b074-5d44bb8d7dae" name="Default Changelist" comment="parameterized-NewAccount">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/becomeARep/barClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/becomeARep/barClass.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -202,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647442633056</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="parameterized-NewAccount">
+      <created>1647446444057</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1647446444057</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -220,7 +231,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commit3EmailUpdated" />
     <MESSAGE value="parameterized" />
-    <option name="LAST_COMMIT_MESSAGE" value="parameterized" />
+    <MESSAGE value="parameterized-NewAccount" />
+    <option name="LAST_COMMIT_MESSAGE" value="parameterized-NewAccount" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/NewAvon$OrderingCases.ic" NAME="OrderingCases Coverage Results" MODIFIED="1647266645431" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
